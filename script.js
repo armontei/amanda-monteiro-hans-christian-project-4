@@ -1,15 +1,17 @@
 // Create app namespace to hold all methods
 const app = {};
 
-// Collect user input
-app.collectInfo = function () { 
+// Get input from user.
+app.collectInfo = function(){ 
 
 };
 
+// Prevent default function of the form.
+
 // Make AJAX request with user inputted data
-app.getRecipes = () => {
+app.getRecipes = function(letter){
     $.ajax({
-        url: `https://www.themealdb.com/api/json/v1/1/search.php?f=${query}`,
+        url: `https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`,
         method: 'GET',
         dataType: 'json',
     }).then((result) => {
@@ -18,16 +20,20 @@ app.getRecipes = () => {
 }
 
 // Display data on the page
-app.displayInfo = function () { };
+app.displayInfo = function () {
 
-// Start app
-app.init = function () { 
-    app.getRecipes();
 };
 
+// Initialize app
+app.init = function () { 
+    app.getRecipes(`a`);
+};
+
+// document ready
 $(function () {
     app.init();
 });
+
 
 /*
 Description of Project:
