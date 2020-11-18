@@ -1,0 +1,59 @@
+.landingPage{
+    height:100vh;
+    background-image:url(../assets/headerBackground.jpg);
+    background-size:cover;
+    justify-content:flex-end;
+    text-align:center;
+}
+
+.landingPage,
+form{
+    display:flex;
+    align-items:center;
+}
+
+form{
+    flex-direction:column;
+}
+
+.headerForm{
+    padding-right:10rem;
+}
+
+h1,
+h2{
+    margin:0 auto;
+}
+
+h1{
+    font-family: 'Gochi Hand', cursive;
+    font-size:8rem;
+}
+
+h2{
+    font-size:2.5rem;
+    font-weight:lighter;
+}
+
+form{
+    padding-top:2rem;
+}
+
+input[type="text"]{
+    width:55%;
+}
+
+input[type="text"],
+.submit{
+    padding:1.3rem;
+}
+
+.submit{
+    width:30%;
+    margin-top:2rem;
+    background-color:$third;
+    border:0.1rem $third;
+    color:$fifth;
+    cursor: pointer;
+}
+
