@@ -14,7 +14,7 @@ app.getRecipes = function(letter){
         url: `https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`,
         method: 'GET',
         dataType: 'json',
-    }).then((result) => {
+    }).then(function(result){
         console.log('results:', result);
     })
 }
