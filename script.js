@@ -2,46 +2,95 @@
 const app = {};
 
 // Get input from user.
-app.collectInfo = function(){ 
+// app.collectInfo = function(){ 
 
-};
+// };
 
 // Prevent default function of the form.
 
 // Make AJAX request with user inputted data
-app.getRecipes = function(letter){
+
+app.getRecipes = function  (food ) {
     $.ajax({
-        url: `https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`,
+        url: `https://www.themealdb.com/api/json/v1/1/search.php?s=${food}`,
         method: 'GET',
-        dataType: 'json',
-    }).then(function(result){
-        console.log('results:', result);
+        dataType: 'json'
+    }).then(function  (result)  {
+
+        
+
+    const results = result.meals;
+    console.log(results);
+        // console.log(result.meals);
+        for (let i = 0; i < results.length; i +=1){
+            console.log(results[i].strMeal, results[i].strMealThumb, results[i].strYoutube, results[i].strSource, results[i].strArea);
+            
+        }
+
+        $('.recipes').append(`<h3>${results[0].strMeal}</h3>
+            <img src="${results[0].strMealThumb}" alt="${results[0].strMeal}">
+            <p>Origin: ${results[0].strArea}</p>
+            <a href="${results[0].strSource}">Full recipe</a>
+            <a href="${results[0].strYoutube}">Recipe video</a>`);
+
+        // app.displayRecipes(result);
+    })
+    
+    
+};  
+
+// get input from user
+app.formSubmit = function(){
+    $(`form`).on(`submit`, function(e){
+        e.preventDefault();
+        
+        const userInput = $(`input:text`).val();
+        // console.log(userInput);
+
+        app.getRecipes(userInput)
+
+        // $('.recipes').empty();
+        
+        // Maybe use forEach();
+
     })
 }
 
-// Display data on the page
-app.displayInfo = function () {
+app.displayRecipes = function(meals) {
 
-};
+    meals.forEach(meal => {
+       
+    })
+    
+}
+
+
+
+// Lookup a single random meal:
+// https://www.themealdb.com/api/json/v1/1/random.php
+
+// if === null;
+
+// dishName = meals.strMeal
+// images = result['strMealThumb']
+// tags = result['strTags']
+// youtube link = result['strYoutube']
+// website link = result['strSource']
+// origin = result['strArea']
+
+// Display data on the page
+// app.displayRecipes = function (recipes) {
+
+// };
 
 // Initialize app
 app.init = function () { 
-    app.getRecipes(`a`);
+    app.formSubmit();
+    
 };
 
 // document ready
 $(function () {
     app.init();
-});
+})
 
-
-/*
-Description of Project:
-User inputs a letter, recipes that start with that letter will generated from an api 
-
-MVP (Minimum Viable Product) Goals:
-Display the title of recipe, the image of the meal, the category, the link/youtube video of the full recipe, origin of recipe
-
-Stretch Goals:
-Click to display full ingredient list and instructions right away to they don't have to go to an external site 
-*/
