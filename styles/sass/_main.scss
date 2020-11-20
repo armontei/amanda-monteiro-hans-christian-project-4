@@ -1,0 +1,13 @@
+.recipes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recipesContainer {
+    width:calc(100% / 3);
+}
+
+.recipeFilter {
+    display: flex;
+}
+

@@ -340,3 +340,21 @@ input[type="text"],
   color: #e2e2e2;
   cursor: pointer;
 }
+
+.recipes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.recipesContainer {
+  width: calc(100% / 3);
+}
+
+.recipeFilter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
