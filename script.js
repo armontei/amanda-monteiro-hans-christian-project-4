@@ -3,11 +3,21 @@ const app = {};
 
 app.displayRecipes = function (dishes) {
 
+    if (dishes === null) {
+        alert(`Nothing found, try something else!`);
+    } else {
+        $('.hidden').show();
+
+        $('html').animate({
+            scrollTop: $('main').offset().top
+        }, 1000);
+    }
+
     // Display user input results on page.
     dishes.forEach(function (dish) {
         const displayOnPage = `
         <ul class="recipesContainer">
-            <li>
+            <li class="${dish.strArea} countryToggle" value="${dish.strArea}">
                 <h3>${dish.strMeal}</h3>
                 <img src="${dish.strMealThumb}" alt="${dish.strMeal}">
                 <a href="${dish.strSource}" target="_blank">Full Recipe</a>
@@ -64,10 +74,20 @@ app.formSubmit = function () {
         $('.recipeFilter').empty();
 
         app.getRecipes(userInput);
+
+    
+    
     })
 }
 
 // Filter by country origin
+app.filterCountries = function() {
+    $('button').on('click', function() {
+        let country = $(this).val();
+        $('.countryToggle').hide();
+        $('.countryToggle').toggleClass(country)
+    })
+}
 
 // Initialize app
 app.init = function () {

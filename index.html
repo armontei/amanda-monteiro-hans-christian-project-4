@@ -16,12 +16,12 @@
             <h2>Enter a food or dish name!</h2>
             <form action="">
                 <label for="userInput" class="srOnly">Enter text here:</label>
-                <input type="text" id="userInput">
+                <input type="text" id="userInput" required=true placeholder="e.g. beef">
                 <input type="submit" value="Get Recipes!" class="submit">
             </form>
         </div>
     </section>
-    <main>
+    <main class="hidden">
         <div class="filter wrapper">
         <p>Filter by country of origin:</p>
         <ul class="recipeFilter">
@@ -34,7 +34,9 @@
         </section>
     </main>
     <footer>
-        <a href="https://junocollege.com/">Created at Juno College 2020</a>
+        <p class="hidden footer">
+            <a href="https://junocollege.com/">Created at Juno College 2020</a>
+        </p>        
     </footer>
     <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
     <script src="./script.js"></script>

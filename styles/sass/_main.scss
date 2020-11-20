@@ -7,9 +7,21 @@
     width:calc(100% / 3);
 }
 
-main{
-    background-image:url(/assets/mainBackground.jpg);
+.recipeFilter {
+    display: flex;
+}
+
+html {
+    background-image:url(../assets/mainBackground.jpg);
     background-repeat:no-repeat;
     background-size:cover;
-    min-height:100vh;
+    background-attachment: fixed;
+}
+
+main {
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none;
 }

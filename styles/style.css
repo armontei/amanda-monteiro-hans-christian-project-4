@@ -353,9 +353,28 @@ input[type="text"],
   width: calc(100% / 3);
 }
 
-main {
-  background-image: url(/assets/mainBackground.jpg);
+.recipeFilter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html {
+  background-image: url(../assets/mainBackground.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+}
+
+main {
   min-height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer {
+  background-color: rgba(226, 226, 226, 0.8);
+  text-align: center;
 }
