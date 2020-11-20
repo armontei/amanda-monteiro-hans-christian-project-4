@@ -273,6 +273,26 @@ body {
   font-size: 1.8rem;
 }
 
+.submit {
+  background-color: #da627d;
+  border: 0.1rem #da627d;
+  color: #0d0628;
+}
+
+body,
+a {
+  color: #0d0628;
+}
+
+button {
+  background-color: #0d0628;
+  color: #e2e2e2;
+  border: 0.1rem solid #e2e2e2;
+  padding: 1.3rem;
+  width: 11rem;
+  cursor: pointer;
+}
+
 .landingPage {
   height: 100vh;
   background-image: url(../assets/headerBackground.jpg);
@@ -335,9 +355,6 @@ input[type="text"],
 .submit {
   width: 30%;
   margin-top: 2rem;
-  background-color: #da627d;
-  border: 0.1rem #da627d;
-  color: #e2e2e2;
   cursor: pointer;
 }
 
@@ -357,6 +374,8 @@ input[type="text"],
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 html {

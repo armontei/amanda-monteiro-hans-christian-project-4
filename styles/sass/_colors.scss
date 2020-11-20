@@ -1,5 +1,25 @@
-$primary:rgb(13, 6, 40);
-$secondary:rgb(154, 52, 142);
-$third:rgb(218, 98, 125);
-$fourth:rgb(252, 161, 125);
-$fifth:rgb(226,226,226);
+$primary:rgb(154, 52, 142);
+$secondary:rgb(218, 98, 125);
+$tertiary:rgb(252, 161, 125);
+$fourth:rgb(226,226,226);
+$fifth:rgb(13, 6, 40);
+
+.submit{
+    background-color:$secondary;
+    border:0.1rem $secondary;
+    color:$fifth;
+}
+
+body,
+a{
+    color:$fifth;
+}
+
+button{
+    background-color:$fifth;
+    color:$fourth;
+    border:0.1rem solid $fourth;
+    padding:1.3rem;
+    width:11rem;
+    cursor: pointer;
+}
