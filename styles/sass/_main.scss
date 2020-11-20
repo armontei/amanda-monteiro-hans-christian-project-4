@@ -7,7 +7,9 @@
     width:calc(100% / 3);
 }
 
-.recipeFilter {
-    display: flex;
+main{
+    background-image:url(/assets/mainBackground.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    min-height:100vh;
 }
-
