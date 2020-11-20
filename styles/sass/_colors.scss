@@ -21,6 +21,22 @@ button{
     border:0.1rem solid $fourth;
 }
 
+.recipesContainer li,
 .footer{
     background-color:rgba(226,226,226,0.8);
+
 }
+
+.recipesContainer li{
+    border: 1rem solid $fifth;
+}
+
+.fa-globe {
+    color: rgb(34, 21, 88);
+    
+}
+
+.fa-youtube {
+    color: red;
+}
+

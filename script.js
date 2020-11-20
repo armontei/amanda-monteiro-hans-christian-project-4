@@ -1,6 +1,7 @@
-// Create app namespace to hold all methods
+// Create app namespace to hold all methods.
 const app = {};
 
+// Display user input results on page.
 app.displayRecipes = function (dishes) {
 
     if (dishes === null) {
@@ -13,23 +14,24 @@ app.displayRecipes = function (dishes) {
         }, 1000);
     }
 
-    // Display user input results on page.
     dishes.forEach(function (dish) {
         const displayOnPage = `
-        <ul class="recipesContainer">
-            <li class="${dish.strArea} countryToggle" value="${dish.strArea}">
-                <h3>${dish.strMeal}</h3>
+        <ul class="recipesContainer ${dish.strArea}">
+            <li>
+                <h4>${dish.strMeal}</h4>
                 <img src="${dish.strMealThumb}" alt="${dish.strMeal}">
-                <a href="${dish.strSource}" target="_blank">Full Recipe</a>
-                <a href="${dish.strYoutube}" target="_blank">YouTube</a>
+                <a href="${dish.strSource}" target="_blank"><i class="fas fa-book-reader"></i>Full Recipe</a>
+                <a href="${dish.strYoutube}" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
                 <p>Country of origin: ${dish.strArea}</p>
             </li>
         </ul>
         `
         $(`.recipes`).append(displayOnPage);
 
-        // adding each country to a button that the user can filter recipes by
-        $(`.recipeFilter`).append(`<li><button>${dish.strArea}</button></li>`);
+        
+
+        // adding each country to a button that the user can filter recipes by.
+        $(`.recipeFilter`).append(`<li><button class="filterButton" value="${dish.strArea}">${dish.strArea}</button></li>`);
 
         // removing duplicate buttons, inspo code from https://stackoverflow.com/questions/14940237/faster-jquery-code-for-duplicate-list-item-removal
         let duplicate = {};
@@ -41,11 +43,11 @@ app.displayRecipes = function (dishes) {
             else
                 duplicate[buttonText] = true;
         });
-        return false;
-    })
+            return false;
+        })
 }
 
-// Make AJAX request with user inputted data
+// Make AJAX request with user input data.
 app.getRecipes = function (food) {
     $.ajax({
         url: `https://www.themealdb.com/api/json/v1/1/search.php?s=${food}`,
@@ -60,7 +62,7 @@ app.getRecipes = function (food) {
     })
 };
 
-// get input from user
+// get input from user.
 app.formSubmit = function () {
     $(`form`).on(`submit`, function (e) {
 
@@ -72,29 +74,30 @@ app.formSubmit = function () {
         // Clear results before displaying new ones.
         $('.recipes').empty();
         $('.recipeFilter').empty();
+        $(`h3 span`).empty();
 
         app.getRecipes(userInput);
-
-    
-    
+        // changing title of results
+        $(`h3 span`).append(userInput);
     })
 }
 
-// Filter by country origin
-app.filterCountries = function() {
-    $('button').on('click', function() {
+// filter recipes by country of origin when button is clicked
+app.filterRecipes = function () {
+    $(`.recipeFilter`).on(`click`, `button`, function () {
         let country = $(this).val();
-        $('.countryToggle').hide();
-        $('.countryToggle').toggleClass(country)
-    })
+        $('.recipesContainer').hide();
+        $('.' + country).show();
+    });
 }
 
-// Initialize app
+// Initialize app.
 app.init = function () {
     app.formSubmit();
+    app.filterRecipes();
 };
 
-// document ready
+// document ready.
 $(function () {
     app.init();
 })

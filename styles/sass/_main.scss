@@ -19,5 +19,50 @@ main{
 
 button{
     padding:1.3rem;
-    width:11rem;
+    width:13rem;
+}
+
+.recipesContainer li{
+    margin:2rem auto;
+    padding:2rem;
+}
+
+li img{
+    margin:2rem 0;
+}
+
+li p{
+    margin-top:1rem;
+    font-style:italic;
+}
+
+h3,
+h4{
+    letter-spacing:0.4rem;
+}
+
+h3{
+    font-size: 5.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hidden p:first-child{
+    font-size:2.6rem;
+    margin-bottom:1.5rem;
+    text-shadow: -0.5px -0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, 0.5px 0.5px 0 white;
+}
+
+h4{
+    font-size:3rem;
+    height:5rem;
+}
+
+.fa-book-reader,
+.fa-youtube {
+    font-size:2.5rem;
+    margin-right:0.4rem;
+}
+
+main{
+    padding:5rem 0;
 }

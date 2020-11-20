@@ -5,12 +5,19 @@ h2{
     font-family: 'Roboto', sans-serif;
 }
 
+h1,
+h3,
+h4{
+    font-family: 'Gochi Hand', cursive;
+}
+
 body{
     font-size:1.8rem;
 }
 
 .landingPage,
 .recipesContainer,
+h3,
 .footer{
     text-align:center;
 }

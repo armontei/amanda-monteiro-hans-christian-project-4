@@ -269,12 +269,19 @@ h2 {
   font-family: 'Roboto', sans-serif;
 }
 
+h1,
+h3,
+h4 {
+  font-family: 'Gochi Hand', cursive;
+}
+
 body {
   font-size: 1.8rem;
 }
 
 .landingPage,
 .recipesContainer,
+h3,
 .footer {
   text-align: center;
 }
@@ -312,8 +319,21 @@ button {
   border: 0.1rem solid #e2e2e2;
 }
 
+.recipesContainer li,
 .footer {
   background-color: rgba(226, 226, 226, 0.8);
+}
+
+.recipesContainer li {
+  border: 1rem solid #0d0628;
+}
+
+.fa-globe {
+  color: #221558;
+}
+
+.fa-youtube {
+  color: red;
 }
 
 .landingPage {
@@ -349,7 +369,6 @@ h2 {
 }
 
 h1 {
-  font-family: 'Gochi Hand', cursive;
   font-size: 8rem;
 }
 
@@ -397,5 +416,54 @@ main {
 
 button {
   padding: 1.3rem;
-  width: 11rem;
+  width: 13rem;
+}
+
+.recipesContainer li {
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+li img {
+  margin: 2rem 0;
+}
+
+li p {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+h3,
+h4 {
+  letter-spacing: 0.4rem;
+}
+
+h3 {
+  font-size: 5.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hidden p:first-child {
+  font-size: 2.6rem;
+  margin-bottom: 1.5rem;
+  text-shadow: -0.5px -0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, 0.5px 0.5px 0 white;
+}
+
+h4 {
+  font-size: 3rem;
+  height: 5rem;
+}
+
+.fa-book-reader,
+.fa-youtube {
+  font-size: 2.5rem;
+  margin-right: 0.4rem;
+}
+
+main {
+  padding: 5rem 0;
+}
+
+footer {
+  padding: 1.5rem 0;
 }
