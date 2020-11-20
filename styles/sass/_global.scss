@@ -8,3 +8,22 @@ h2{
 body{
     font-size:1.8rem;
 }
+
+.landingPage,
+.recipesContainer,
+.footer{
+    text-align:center;
+}
+
+.submit,
+button{
+    cursor: pointer;
+}
+
+.landingPage,
+form,
+.recipes,
+.recipeFilter{
+    display:flex;
+    flex-wrap:wrap;
+}

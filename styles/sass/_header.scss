@@ -3,12 +3,10 @@
     background-image:url(../assets/headerBackground.jpg);
     background-size:cover;
     justify-content:flex-end;
-    text-align:center;
 }
 
 .landingPage,
 form{
-    display:flex;
     align-items:center;
 }
 
@@ -51,8 +49,5 @@ input[type="text"],
 .submit{
     width:30%;
     margin-top:2rem;
-    cursor: pointer;
 }
-
-
 

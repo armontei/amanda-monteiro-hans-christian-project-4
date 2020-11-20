@@ -273,6 +273,28 @@ body {
   font-size: 1.8rem;
 }
 
+.landingPage,
+.recipesContainer,
+.footer {
+  text-align: center;
+}
+
+.submit,
+button {
+  cursor: pointer;
+}
+
+.landingPage,
+form,
+.recipes,
+.recipeFilter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .submit {
   background-color: #da627d;
   border: 0.1rem #da627d;
@@ -288,9 +310,10 @@ button {
   background-color: #0d0628;
   color: #e2e2e2;
   border: 0.1rem solid #e2e2e2;
-  padding: 1.3rem;
-  width: 11rem;
-  cursor: pointer;
+}
+
+.footer {
+  background-color: rgba(226, 226, 226, 0.8);
 }
 
 .landingPage {
@@ -300,14 +323,10 @@ button {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  text-align: center;
 }
 
 .landingPage,
 form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -355,27 +374,10 @@ input[type="text"],
 .submit {
   width: 30%;
   margin-top: 2rem;
-  cursor: pointer;
-}
-
-.recipes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .recipesContainer {
   width: calc(100% / 3);
-}
-
-.recipeFilter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 html {
@@ -393,7 +395,7 @@ main {
   display: none;
 }
 
-.footer {
-  background-color: rgba(226, 226, 226, 0.8);
-  text-align: center;
+button {
+  padding: 1.3rem;
+  width: 11rem;
 }
