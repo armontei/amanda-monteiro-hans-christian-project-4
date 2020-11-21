@@ -16,13 +16,13 @@ app.displayRecipes = function (dishes) {
 
     dishes.forEach(function (dish) {
         const displayOnPage = `
-        <ul class="recipesContainer ${dish.strArea}">
+        <ul class="recipesContainer ${dish.strArea}" id="buttonList">
             <li>
                 <h4>${dish.strMeal}</h4>
                 <img src="${dish.strMealThumb}" alt="${dish.strMeal}">
-                <a href="${dish.strSource}" target="_blank"><i class="fas fa-book-reader"></i>Full Recipe</a>
-                <a href="${dish.strYoutube}" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
-                <p>Country of origin: ${dish.strArea}</p>
+                <i class="fas fa-book-reader"></i><a href="${dish.strSource}" target="_blank">Full Recipe</a>
+                <i class="fab fa-youtube"></i><a href="${dish.strYoutube}" target="_blank">YouTube</a>
+                <p>${dish.strArea}</p>
             </li>
         </ul>
         `
@@ -45,6 +45,7 @@ app.displayRecipes = function (dishes) {
         });
             return false;
         })
+
 }
 
 // Make AJAX request with user input data.
@@ -101,4 +102,5 @@ app.init = function () {
 $(function () {
     app.init();
 })
+
 

@@ -2,7 +2,6 @@
     height:100vh;
     background-image:url(../assets/headerBackground.jpg);
     background-size:cover;
-    justify-content:flex-end;
 }
 
 .landingPage,
@@ -16,6 +15,11 @@ form{
 
 .headerForm{
     padding-right:10rem;
+    background-color:rgba(226,226,226,0.5);
+    padding: 1.5rem;
+    margin: 4rem;
+    position: absolute;
+    right: 10%;
 }
 
 h1,
@@ -48,5 +52,6 @@ input[type="text"],
 .submit{
     width:30%;
     margin-top:2rem;
+    border-radius:5px;
 }
 

@@ -1,0 +1,26 @@
+.submit:hover,
+.submit:focus{
+    background-color:$primary;
+    color:$fourth;
+}
+
+button:hover,
+button:focus{
+    background-color:$fourth;
+    color:$fifth;
+}
+
+.recipesContainer li:hover,
+.recipesContainer li:focus{
+    background-color:$secondary;
+}
+
+.recipesContainer a:hover,
+.recipesContainer a:focus{
+    color:$fourth;
+}
+
+// .footer a:hover,
+// .footer a:focus{
+
+// }
