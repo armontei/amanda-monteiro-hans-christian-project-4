@@ -28,8 +28,6 @@ app.displayRecipes = function (dishes) {
         `
         $(`.recipes`).append(displayOnPage);
 
-        
-
         // adding each country to a button that the user can filter recipes by.
         $(`.recipeFilter`).append(`<li><button class="filterButton" value="${dish.strArea}">${dish.strArea}</button></li>`);
 
@@ -45,7 +43,6 @@ app.displayRecipes = function (dishes) {
         });
             return false;
         })
-
 }
 
 // Make AJAX request with user input data.

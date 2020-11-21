@@ -490,6 +490,10 @@ main {
   padding: 1.1rem;
 }
 
+.footer a {
+  padding: 1.1rem 0;
+}
+
 .submit:hover,
 .submit:focus {
   background-color: #9a348e;
@@ -510,6 +514,18 @@ button:focus {
 .recipesContainer a:hover,
 .recipesContainer a:focus {
   color: #e2e2e2;
+}
+
+.footer a:hover,
+.footer a:focus {
+  background-color: #9a348e;
+  color: #e2e2e2;
+}
+
+.fa-arrow-circle-up:hover,
+.fa-arrow-circle-up:focus {
+  color: #9a348e;
+  font-size: 4.5rem;
 }
 
 /* Portrait tablet and small desktops */

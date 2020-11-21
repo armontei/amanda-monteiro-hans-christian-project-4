@@ -20,7 +20,14 @@ button:focus{
     color:$fourth;
 }
 
-// .footer a:hover,
-// .footer a:focus{
+.footer a:hover,
+.footer a:focus{
+    background-color:$primary;
+    color:$fourth;
+}
 
-// }
+.fa-arrow-circle-up:hover,
+.fa-arrow-circle-up:focus{
+    color:$primary;
+    font-size:4.5rem;
+}
