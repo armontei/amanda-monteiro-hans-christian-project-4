@@ -294,6 +294,7 @@ button {
 .landingPage,
 form,
 .recipes,
+.recipeLinks,
 .recipeFilter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -431,7 +432,7 @@ li img {
   margin: 2rem 0;
 }
 
-li p {
+.dishCountry {
   margin-top: 1rem;
   font-style: italic;
 }
@@ -454,7 +455,7 @@ h3 span {
   padding: 0 0.5rem;
 }
 
-main p {
+.filterTitle {
   font-size: 2.6rem;
   margin-bottom: 1.5rem;
   text-shadow: -0.5px -0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, 0.5px 0.5px 0 white;
@@ -469,6 +470,16 @@ h4 {
 .fa-youtube {
   font-size: 2.5rem;
   margin-right: 0.4rem;
+}
+
+.recipeLinks {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.recipeLinks p:first-child {
+  margin-right: 10px;
 }
 
 main {
@@ -506,14 +517,10 @@ button:focus {
   color: #0d0628;
 }
 
-.recipesContainer li:hover,
-.recipesContainer li:focus {
-  background-color: #da627d;
-}
-
 .recipesContainer a:hover,
 .recipesContainer a:focus {
   color: #e2e2e2;
+  background-color: #da627d;
 }
 
 .footer a:hover,
@@ -529,5 +536,64 @@ button:focus {
 }
 
 /* Portrait tablet and small desktops */
+@media (max-width: 985px) {
+  .headerForm {
+    margin: 0 auto;
+    position: static;
+  }
+  .recipesContainer {
+    width: 50%;
+  }
+  .recipeLinks p:first-child {
+    margin-right: 20px;
+  }
+}
+
 /* Landscape phone to portrait tablet */
+@media (max-width: 721px) {
+  html {
+    font-size: 54%;
+  }
+  .recipeLinks p:first-child {
+    margin-right: 10px;
+  }
+}
+
 /* Landscape phones and down */
+@media (max-width: 576px) {
+  .recipesContainer {
+    width: 100%;
+  }
+  main {
+    font-size: 1.9rem;
+  }
+  .recipeLinks p:first-child {
+    margin-right: 15px;
+  }
+  .submit {
+    width: 150px;
+  }
+  h1 {
+    font-size: 5.8rem;
+  }
+  h2 {
+    font-size: 2.3rem;
+  }
+  input[type="text"] {
+    width: 70%;
+  }
+  .filterTitle {
+    text-align: center;
+  }
+  .recipeFilter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .scrollUp {
+    bottom: 28px;
+  }
+  .footer a:hover {
+    padding: 0;
+  }
+}

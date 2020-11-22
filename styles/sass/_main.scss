@@ -31,7 +31,7 @@ li img{
     margin:2rem 0;
 }
 
-li p{
+.dishCountry {
     margin-top:1rem;
     font-style:italic;
 }
@@ -54,7 +54,7 @@ h3 span {
     padding: 0 0.5rem;
 }
 
-main p{
+.filterTitle {
     font-size:2.6rem;
     margin-bottom:1.5rem;
     text-shadow: -0.5px -0.5px 0 white, 0.5px -0.5px 0 white, -0.5px 0.5px 0 white, 0.5px 0.5px 0 white;
@@ -69,6 +69,14 @@ h4{
 .fa-youtube {
     font-size:2.5rem;
     margin-right:0.4rem;
+}
+
+.recipeLinks{
+    justify-content: center;
+}
+
+.recipeLinks p:first-child {
+    margin-right:10px;
 }
 
 main{

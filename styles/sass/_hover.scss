@@ -10,14 +10,10 @@ button:focus{
     color:$fifth;
 }
 
-.recipesContainer li:hover,
-.recipesContainer li:focus{
-    background-color:$secondary;
-}
-
 .recipesContainer a:hover,
 .recipesContainer a:focus{
     color:$fourth;
+    background-color: $secondary;
 }
 
 .footer a:hover,

@@ -20,9 +20,11 @@ app.displayRecipes = function (dishes) {
             <li>
                 <h4>${dish.strMeal}</h4>
                 <img src="${dish.strMealThumb}" alt="${dish.strMeal}">
-                <i class="fas fa-book-reader"></i><a href="${dish.strSource}" target="_blank">Full Recipe</a>
-                <i class="fab fa-youtube"></i><a href="${dish.strYoutube}" target="_blank">YouTube</a>
-                <p>${dish.strArea}</p>
+                <div class="recipeLinks">
+                    <p><i class="fas fa-book-reader"></i><a href="${dish.strSource}" target="_blank">Full Recipe</a></p>
+                    <p><i class="fab fa-youtube"></i><a href="${dish.strYoutube}" target="_blank">YouTube</a></p>
+                </div>
+                <p class="dishCountry">${dish.strArea}</p>
             </li>
         </ul>
         `
