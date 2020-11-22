@@ -492,7 +492,7 @@ main {
   position: fixed;
   margin: 3rem;
   right: 0;
-  bottom: 0;
+  bottom: 11px;
   cursor: pointer;
 }
 
@@ -560,7 +560,7 @@ button:focus {
 }
 
 /* Landscape phones and down */
-@media (max-width: 576px) {
+@media (max-width: 620px) {
   .recipesContainer {
     width: 100%;
   }
