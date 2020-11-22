@@ -1,9 +1,10 @@
 // Create app namespace to hold all methods.
 const app = {};
 
-// Display user input results on page.
+// Function to display user input results on page.
 app.displayRecipes = function (dishes) {
 
+    // Alert user if word they entered does not bring back any results, otherwise move on to resuls section
     if (dishes === null) {
         alert(`Nothing found, try something else!`);
     } else {
@@ -14,6 +15,7 @@ app.displayRecipes = function (dishes) {
         }, 1000);
     }
 
+    // Pull results from the API and dynamically add them on the page
     dishes.forEach(function (dish) {
         const displayOnPage = `
         <ul class="recipesContainer ${dish.strArea}" id="buttonList">
@@ -30,7 +32,7 @@ app.displayRecipes = function (dishes) {
         `
         $(`.recipes`).append(displayOnPage);
 
-        // adding each country to a button that the user can filter recipes by.
+        // adding each country the recipe is from to a button that the user can filter recipes by
         $(`.recipeFilter`).append(`<li><button class="filterButton" value="${dish.strArea}">${dish.strArea}</button></li>`);
 
         // removing duplicate buttons, inspo code from https://stackoverflow.com/questions/14940237/faster-jquery-code-for-duplicate-list-item-removal
@@ -77,12 +79,13 @@ app.formSubmit = function () {
         $(`h3 span`).empty();
 
         app.getRecipes(userInput);
+
         // changing title of results
         $(`h3 span`).append(userInput);
     })
 }
 
-// filter recipes by country of origin when button is clicked
+// function to filter recipes by country of origin when button is clicked
 app.filterRecipes = function () {
     $(`.recipeFilter`).on(`click`, `button`, function () {
         let country = $(this).val();
@@ -91,13 +94,13 @@ app.filterRecipes = function () {
     });
 }
 
-// Initialize app.
+// Initialize app
 app.init = function () {
     app.formSubmit();
     app.filterRecipes();
 };
 
-// document ready.
+// Document ready
 $(function () {
     app.init();
 })
